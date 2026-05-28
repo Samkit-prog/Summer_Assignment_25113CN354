@@ -2,7 +2,7 @@
 
 int main() {
     int n;
-    long long fact = 1;
+    int fact = 1;
     printf("Enter a number: ");
     scanf("%d", &n);
     if (n < 0) {
@@ -10,7 +10,8 @@ int main() {
     } else {
         for (int i = 1; i <= n; i++)
             fact *= i;
-        printf("Factorial of %d = %lld\n", n, fact);
+
+        printf("Factorial of %d is = %d", n,fact);
     }
     return 0;
 }

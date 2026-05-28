@@ -1,19 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    long long n;
+    int n,d;
     int count = 0;
     printf("Enter a number: ");
-    scanf("%lld", &n);
-    if (n == 0) {
-        count = 1;
-    } else {
-        if (n < 0) n = -n;
-        while (n != 0) {
-            n /= 10;
-            count++;
-        }
+    scanf("%d", &n);
+    while(n>0)
+    {
+        d=n%10;
+        count++;
+        n=n/10;
+
     }
+    
     printf("Number of digits = %d\n", count);
     return 0;
 }
