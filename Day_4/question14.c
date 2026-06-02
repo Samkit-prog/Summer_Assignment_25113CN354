@@ -6,12 +6,12 @@ int main() {
     printf("Enter n: ");
     scanf("%d", &n);
 
-    if (n == 0)
+    if (n == 1)
         printf("Nth Fibonacci number = %d", a);
-    else if (n == 1)
+    else if (n == 2)
         printf("Nth Fibonacci number = %d", b);
     else {
-        for (int i = 2; i <= n; i++) {
+        for (int i = 3; i <= n; i++) {
             c = a + b;
             a = b;
             b = c;
