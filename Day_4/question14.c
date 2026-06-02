@@ -1,23 +1,23 @@
-#include<stdio.h>
-int fib(int );
-int main(){
-    int n;
-    printf("Enter a number upto which fibonacci series is to be printed :");
-    scanf("%d",&n);
-    printf("Fibonacci series upto %dth term is :",n);
-    for(int i=1;i<=n;i++){
-        printf("%d\t",fib(i));
+#include <stdio.h>
+
+int main() {
+    int n, a = 0, b = 1, c;
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    if (n == 0)
+        printf("Nth Fibonacci number = %d", a);
+    else if (n == 1)
+        printf("Nth Fibonacci number = %d", b);
+    else {
+        for (int i = 2; i <= n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        printf("Nth Fibonacci number = %d", b);
     }
-}
-int fib(int a){
-    if(a<=0){
-        printf("Enter positive integer");
-        return 0;
-    }
-    if(a==1||a==2){
-        return 1;
-    }
-    else{
-        return fib(a-1)+fib(a-2);
-    }
+
+    return 0;
 }
